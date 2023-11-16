@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Import animated background  -->
+    <link rel="stylesheet" href="../background.css" />
+
+    <link rel="stylesheet" href="../main.css" />
+
+    <title>NT-2023-01</title>
+  </head>
+
+  <body class="hex">
+    <main class="container">
+      <div class="card mt-1">
+        <div class="card-header">
+          <div class="card-title"><h1>OSI / ISO Model</h1></div>
+        </div>
+        <div class="card-body">
+          <h2>Name origin</h2>
+          <p class="lead">
+            The model is called the ISO OSI (Open Systems Interconnection)
+            Reference Model because it deals with connecting open systems- that
+            is, systems that are open for communication with other systems.
+          </p>
+
+          <p class="lead">
+            The OSI model has seven layers. The principles that were applied to
+            arrive at the seven layers can be briefly summarized as follows:
+          </p>
+
+          <ul>
+            <li class="p-1">
+              A layer should be created where a different abstraction is needed.
+            </li>
+            <li class="p-1">
+              Each layer should perform a well-defined function.
+            </li>
+            <li class="p-1">
+              The function of each layer should be chosen with an eye toward
+              defining internationally standardized protocols
+            </li>
+            <li class="p-1">
+              The layer boundaries should be chosen to minimize the information
+              flow across the interfaces.
+            </li>
+            <li class="p-1">
+              The number of layers should be large enough that distinct
+              functions need not be thrown together in the same layer out of
+              necessity and small enough that the architecture does not become
+              unwieldy
+            </li>
+          </ul>
+          <img
+            class="rounded mx-auto d-block border mt-54"
+            src="./assets/images/iso_osi_description.png"
+            alt="Image from book showing all 7 layers in this model"
+            style="max-width: 100%"
+          />
+        </div>
+      </div>
+      <div class="mt-5">
+        <div class="">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3>The Physical Layer</h3>
+              <p class="mb-0 lead">
+                The physical layer is concerned with transmitting raw bits over
+                a communication channel.
+              </p>
+              <ul class="mt-1">
+                <li class="p-1">IEEE 1394 (FireWire)</li>
+                <li class="p-1">IEEE 802.11 (For LANs)</li>
+                <li class="p-1">USB - Universal Serial Bus</li>
+                <li class="p-1">RS-449- Recommended Standard 449</li>
+                <li class="p-1">RS-232- Recommended Standard 232</li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3>Data Link Layer</h3>
+              <p class="mb-0 lead">
+                The main task of the data link layer is to transform a raw
+                transmission facility into a line that appears free of
+                undetected transmission errors.
+              </p>
+              <ul class="mt-1">
+                <li class="p-1">SLIP- Serial Line Internet Protocol</li>
+                <li class="p-1">
+                  L2TP- Layer 2 Tunneling Protocol
+                  <p>
+                    is a virtual private network (VPN) protocol that creates a
+                    connection between your device and a VPN server without
+                    encrypting your content.
+                    <a href="https://nordvpn.com/blog/l2tp-protocol/"
+                      ><i class="fa-solid fa-circle-info"></i
+                    ></a>
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3>Network Layer</h3>
+              <p class="mb-0 lead">
+                The network layer controls the operation of the subnet.
+              </p>
+              <ul class="mt-1">
+                <li class="p-1">ARP- Address Resolution Protocol</li>
+                <li class="p-1">ICMP- Internet Control Message Protocol</li>
+                <li class="p-1">IGMP - Internet Group Management Protocol</li>
+                <li class="p-1">IPv4- Internet Protocol version 4</li>
+                <li class="p-1">IPv6- Internet Protocol version 6</li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3>Transport Layer</h3>
+              <p class="mb-0 lead">
+                The basic function of the transport layer is to accept data from
+                above it, split it up into smaller units if need be, pass these
+                to the network layer, and ensure that the pieces all arrive
+                correctly at the other end.
+              </p>
+              <ul class="mt-1">
+                <li class="p-1">RTP- Real-time Transport Protocol</li>
+                <li class="p-1">TCP- Transmission Control Protocol</li>
+                <li class="p-1">UDP- User Datagram Protocol</li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3>Session Layer</h3>
+              <p class="mb-0 lead">
+                The session layer allows users on different machines to
+                establish sessions between them.
+              </p>
+              <ul class="mt-1">
+                <li class="p-1">
+                  NetBIOS- Network Basic Input/Output System
+                  <p>
+                    It provides services related to the session layer of the OSI
+                    model allowing applications on separate computers to
+                    communicate over a local area network. As strictly an API,
+                    NetBIOS is not a networking protocol.
+                    <a href="https://en.wikipedia.org/wiki/NetBIOS"
+                      ><i class="fa-brands fa-wikipedia-w"></i
+                    ></a>
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3>Presentation Layer</h3>
+              <p class="mb-0 lead">
+                Unlike the lower layers, which are mostly concerned with moving
+                bits around, the presentation layer is concerned with the syntax
+                and semantics of the information transmitted.
+              </p>
+              <ul class="mt-1">
+                <li class="p-1">
+                  SSL builds a secure connection between two sockets, including:
+                  <ul>
+                    <li>Parameter negotiation between client and server.</li>
+                    <li>Authentication of the server by the client.</li>
+                    <li>Secret communication.</li>
+                    <li>Data integrity protection.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3>Application Layer</h3>
+              <p class="mb-0 lead">
+                The application layer contains a variety of protocols that are
+                commonly needed by users.
+              </p>
+              <ul class="mt-1">
+                <li class="p-1">DNS- Domain Name System</li>
+                <li class="p-1">FTP- File Transfer Protocol</li>
+                <li class="p-1">HTTP- HyperText Transfer Protocol</li>
+                <li class="p-1">
+                  MIME- The Multipurpose Internet Mail Extensions
+                </li>
+                <li class="p-1">NNTP- Network News Transfer Protocol</li>
+                <li class="p-1">SIP- The Session Initiation Protocol</li>
+                <li class="p-1">TELNET- Teletype Network</li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3>Others:</h3>
+              <p class="mb-0 lead">
+                Protocols which we think are in many different layers
+              </p>
+              <ul class="mt-1">
+                <li class="p-1">Bluetooth</li>
+                <li class="p-1">DHCP- Dynamic Host Configuration Protocol</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Floating buttons container -->
+      <div
+        class="d-flex justify-content-evenly py-4 mt-3 icons-container shadow-lg"
+        style="font-size: larger"
+      >
+        <a
+          href="../index.html"
+          style="display: block; position: fixed; bottom: 92%; right: 12px"
+          class="btn btn-primary p-3"
+          ><i class="fa-solid fa-house fa-2xl me-1"></i
+        ></a>
+        <a
+          href="./practical.html"
+          style="display: block; position: fixed; bottom: 83%; right: 12px"
+          class="btn btn-primary p-3"
+          ><i class="fa-solid fa-gears fa-2xl me-1"></i
+        ></a>
+      </div>
+      <!-- Floating buttons container -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bottom bg-dark text-light mt-5 p-2 text-center">
+      <p class="p-0 m-0">
+        Information based on book <i>"Computer Networks"</i> by Tanenbaum
+      </p>
+      <p class="p-0 m-0">&copy;Group: <i>ife23_01</i></p>
+    </footer>
+    <!-- FOOTER -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
