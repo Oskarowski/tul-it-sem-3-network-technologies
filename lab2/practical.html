@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Import animated background  -->
+    <link rel="stylesheet" href="../background.css" />
+
+    <link rel="stylesheet" href="../main.css" />
+
+    <title>NT-2023-01</title>
+  </head>
+
+  <body class="hex">
+    <main class="container">
+      <ul class="list-group mt-5">
+        <li class="list-group-item">
+          <h5 class="text-center">Find your MAC address</h5>
+
+          <ul class="mt-1">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.1-1 windows-MAC.png"
+              style="max-width: 100%"
+            />
+            <p class="text-center">
+              For Windows use <code>ipconfig /all</code>
+            </p>
+          </ul>
+          <ul class="mt-1">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.1-1 linux-MAC.png"
+              style="max-width: 100%"
+            />
+            <p class="text-center">For Linux use <code>ip link show</code></p>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="list-group mt-5">
+        <li class="list-group-item">
+          <h5 class="text-center">Find the producer of your network adapter</h5>
+
+          <ul class="mt-1">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.2-1 windows.png"
+              style="max-width: 100%"
+            />
+          </ul>
+        </li>
+      </ul>
+      <ul class="list-group mt-5">
+        <li class="list-group-item">
+          <h5 class="text-center">Flush ARP cache</h5>
+
+          <ul class="mt-1">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.3 windows-flush-ARP.png"
+              style="max-width: 100%"
+            />
+          </ul>
+          <p class="text-center">
+            For Windows <code>arp -d</code> to clear the ARP cache, and
+            <code>arp -a</code> to check it's content
+          </p>
+        </li>
+      </ul>
+
+      <ul class="list-group mt-5">
+        <li class="list-group-item">
+          <h5 class="text-center">
+            Set the same IP address on two different hosts
+          </h5>
+
+          <ul class="mt-1">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.4-1 cmd-duplicated-on-lenovo.png"
+              style="max-width: 100%"
+            />
+          </ul>
+          <p class="text-center mt-1">
+            Device with original IP address still has access to internet, and
+            Windows <code>ipconfig /all</code> detects the conflict in IP
+            addresses, copycat device has no internet access
+          </p>
+        </li>
+      </ul>
+
+      <ul class="list-group mt-5">
+        <li class="list-group-item">
+          <h5 class="text-center">Release and renew IP address</h5>
+
+          <ul class="mt-1">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.5-1 & 2.6-1 dhcp-packet.png"
+              style="max-width: 100%"
+            />
+          </ul>
+          <p class="text-center mt-1">
+            On windows use <code>ipconfig /release</code> and
+            <code>ipconfig /renew</code> to release and renew IP address
+          </p>
+        </li>
+      </ul>
+
+      <ul class="list-group mt-5">
+        <li class="list-group-item">
+          <h5 class="text-center">
+            Change MAC address of one device to the same as the MAC address of
+            the other device, and verify IP address obtained
+          </h5>
+
+          <ul class="mt-1">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.7-1 pc-change-MAC-address.png"
+              style="max-width: 100%"
+            />
+            <p class="text-center mt-1">
+              On copycat device, with the usage of Windows GUI we change the MAC
+              address
+            </p>
+          </ul>
+          <br />
+          <ul class="mt-3">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.7-2 pc-ipconfig-changed.png"
+              style="max-width: 100%"
+            />
+            <p class="text-center mt-1">
+              On copycat device, we can observe that MAC address has changed for
+              this which we have provided, with this change also the IP address
+              has changed and now mimic the IP from "original" device
+            </p>
+          </ul>
+          <br />
+          <ul class="mt-3">
+            <img
+              class="rounded mx-auto d-block border"
+              src="././assets/images/2.7-3 laptop.png"
+              style="max-width: 100%"
+            />
+            <p class="text-center mt-1">
+              The original device for comparison purpose
+            </p>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Floating buttons container -->
+      <div
+        class="d-flex justify-content-evenly py-4 mt-3 icons-container shadow-lg"
+      >
+        <a
+          href="../index.html"
+          style="display: block; position: fixed; bottom: 92%; right: 12px"
+          class="btn btn-primary p-3"
+          ><i class="fa-solid fa-house fa-2xl me-1"></i
+        ></a>
+        <a
+          href="./theory.html"
+          style="display: block; position: fixed; bottom: 83%; right: 12px"
+          class="btn btn-primary p-3 m-0"
+          ><i class="fa-solid fa-book fa-2xl me-1 ms-1"></i
+        ></a>
+      </div>
+      <!-- Floating buttons container -->
+    </main>
+
+    <!-- FOOTER -->
+    <!-- <footer class="bottom bg-dark text-light mt-5 p-2 text-center">
+      <p class="p-0 m-0">&copy;Group: <i>ife23_01</i></p>
+    </footer> -->
+    <!-- FOOTER -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
