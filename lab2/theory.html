@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Import animated background  -->
+    <link rel="stylesheet" href="../background.css" />
+
+    <link rel="stylesheet" href="../main.css" />
+
+    <title>NT-2023-01</title>
+  </head>
+
+  <body class="hex">
+    <main class="container">
+      <section class="mt-5">
+        <div class="">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3 class="p-3">Ethernet standards</h3>
+              <p class="mb-0 lead">
+                Ethernet standards define the characteristics, functionalities,
+                and deployment details of a particular type of media. They
+                establish the standardized technical specifications for hardware
+                connectivity, and these specifications differ across various
+                Ethernet types based on factors such as cabling and transmission
+                speed.
+              </p>
+              <table class="table table-bordered text-center mt-2">
+                <!-- great tool for generating tables: https://www.tablesgenerator.com/ -->
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>IEEE documentation</th>
+                    <th>Standard</th>
+                    <th>Medium</th>
+                    <th>Speed</th>
+                    <th>Distance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="align-middle">Ethernet</td>
+                    <td>802.3a</td>
+                    <td>10 Base2</td>
+                    <td rowspan="2" class="align-middle">Coxial</td>
+                    <td rowspan="3" class="align-middle">10 Mbps</td>
+                    <td>200 meters</td>
+                  </tr>
+                  <tr>
+                    <td>802.3</td>
+                    <td>10 Base5</td>
+                    <td>500 meters</td>
+                  </tr>
+                  <tr>
+                    <td>802.3i</td>
+                    <td>10 BaseT</td>
+                    <td>UTP</td>
+                    <td>100 meters</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3" class="align-middle">Fast Ethernet</td>
+                    <td rowspan="3" class="align-middle">802.3u</td>
+                    <td>100 BaseTx</td>
+                    <td>UTP</td>
+                    <td rowspan="3" class="align-middle">100 Mbps</td>
+                    <td>100m</td>
+                  </tr>
+                  <tr>
+                    <td>100 BaseFx</td>
+                    <td>MMF</td>
+                    <td>2km</td>
+                  </tr>
+                  <tr>
+                    <td>100 BaseFx</td>
+                    <td>SMF</td>
+                    <td>20km</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="5" class="align-middle">Gigabit Ethernet</td>
+                    <td rowspan="5" class="align-middle">802.3z</td>
+                    <td>1000 Base T</td>
+                    <td>UTP</td>
+                    <td rowspan="5" class="align-middle">1 Gbps</td>
+                    <td>100m</td>
+                  </tr>
+                  <tr>
+                    <td>1000 Base SX</td>
+                    <td rowspan="2" class="align-middle">MMF</td>
+                    <td>275m</td>
+                  </tr>
+                  <tr>
+                    <td>1000 Base LX</td>
+                    <td>512m</td>
+                  </tr>
+                  <tr>
+                    <td>1000 Base LX</td>
+                    <td rowspan="2" class="align-middle">SMF</td>
+                    <td>20km</td>
+                  </tr>
+                  <tr>
+                    <td>1000 Base SH</td>
+                    <td>80km</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2" class="align-middle">10 Gig Ethernet</td>
+                    <td rowspan="2" class="align-middle">IEEE 802.3ae</td>
+                    <td>10GBase-ER</td>
+                    <td rowspan="2" class="align-middle">SMF</td>
+                    <td rowspan="2" class="align-middle">10 Gbps</td>
+                    <td>10km</td>
+                  </tr>
+                  <tr>
+                    <td>10GBase-LR</td>
+                    <td>40km</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Ethernet Frame</h3>
+              <p class="lead">
+                Ethernet frame is a single packet of data under network layer,
+                determines how data is transported from one network device to
+                another. It includes the MAC addresses of the source and
+                destination hosts, the frame type identifier, data payload, and
+                a Frame Check Sequence (CRC) for error detection.
+              </p>
+              <div class="mt-3">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="././assets/images/ethernet_frame_img.png"
+                  style="max-width: 100%"
+                />
+              </div>
+              <ul class="list-group list-group-flush mt-4">
+                <li class="list-group-item">
+                  <h5>Preamble</h5>
+                  <p class="m-0">
+                    A 7-byte long field indicating the start of the frame and
+                    allowing establishment of bit synchronization between sender
+                    and receiver.
+                  </p>
+                </li>
+
+                <li class="list-group-item">
+                  <h5>SFD (Start of Frame Delimiter)</h5>
+                  <p class="m-0">
+                    A 1-byte field, indicating that upcoming bits are the
+                    starting of the frame.
+                  </p>
+                </li>
+
+                <li class="list-group-item">
+                  <h5>Destination Address</h5>
+                  <p class="m-0">
+                    A 6-byte field containing the MAC address of the destination
+                    machine.
+                  </p>
+                </li>
+
+                <li class="list-group-item">
+                  <h5>Source Address</h5>
+                  <p class="m-0">
+                    A 6-byte field containing the MAC address of the source
+                    machine.
+                  </p>
+                </li>
+
+                <li class="list-group-item">
+                  <h5>Length</h5>
+                  <p class="m-0">
+                    A 2-byte field indicating the length of the entire Ethernet
+                    frame.
+                  </p>
+                </li>
+
+                <li class="list-group-item">
+                  <h5>Data</h5>
+                  <p class="m-0">Also known as Payload.</p>
+                </li>
+
+                <li class="list-group-item">
+                  <h5>CRC (Cyclic Redundancy Check)</h5>
+                  <p class="m-0">
+                    A 4-byte field consisting of a 32-bit hash code data
+                    generated over the 4 previous fields. Used to check if the
+                    data was corrupted during transmission.
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">MAC address</h3>
+              <p class="lead">
+                A MAC address which stands for Media Access Control is a
+                <b>unique</b>, 12 in length alphanumeric identifier assigned to
+                each network interfaces. Works on the bottom of data link layer.
+              </p>
+              <div class="mt-3">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="././assets/images/mac-address-infographic.png"
+                  style="max-width: 100%"
+                />
+              </div>
+              <ul class="list-group list-group-flush mt-4">
+                <li class="list-group-item">
+                  A MAC (Media Access Control) address is a unique identifier
+                  assigned to network interface controllers (NICs) by the
+                  manufacturer.
+                </li>
+                <li class="list-group-item">
+                  It is a hardware address and is associated with the physical
+                  network interface of a device.
+                </li>
+                <li class="list-group-item">
+                  MAC addresses are 48-bit addresses expressed in hexadecimal
+                  format (e.g., 00:1A:2B:3C:4D:5E).
+                </li>
+                <li class="list-group-item">
+                  MAC addresses are used at the data link layer (Layer 2) of OSI
+                  model.
+                </li>
+                <li class="list-group-item">
+                  They provide a unique identity to devices within a local area
+                  network (LAN) and are used for addressing and identifying data
+                  packets at the data link layer.
+                </li>
+                <li class="list-group-item">
+                  MAC addresses are used for communication within a LAN and are
+                  not routable over the internet.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Broadcasting</h3>
+              <p class="lead">
+                Broadcasting in widespread transmission of data packets to all
+                devices in a network at the same time.
+              </p>
+              <div class="mt-3">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="././assets/images/broadcast-infographic.png"
+                  style="max-width: 100%"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">
+                The Difference Between Hub, Switch, and Router
+              </h3>
+              <p class="lead">
+                Hubs, switches, and routers are all physical devices that let
+                you connect one or more computers to other computers, networked
+                devices, or to other networks.
+              </p>
+              <ul>
+                <p>
+                  <b>Hub</b> operates at the physical layer (Layer 1) of the OSI
+                  model, and it is used for connecting multiple devices together
+                  and making them act as a single network segment and allows for
+                  transmitting bits. It doesn't distinguish between devices and
+                  doesn't filter traffic.
+                </p>
+                <p>
+                  <b>Switch</b> operates at the data link layer (Layer 2)
+                  transmitting frames. It uses MAC addresses to intelligently
+                  forward data only to the device for which the data is
+                  intended.
+                </p>
+                <p>
+                  <b>Router</b> operates at the network layer (Layer 3)
+                  transmitting packets, is responsible for receiving, analysing
+                  network packets from different networks.
+                </p>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">CSMA/CD & Collision</h3>
+              <p class="lead">
+                Carrier Sense Multiple Access with Collision Detection (CSMA/CD)
+                is a network protocol for management transmission in Ethernet
+                networks.
+              </p>
+              <p>
+                In a situation where two devices want to use same data channel
+                to transmit data at the same time, a collision occurs. CSMA/CD
+                enables devices to detect this collision and stop transmitting
+                and after time retry transmission.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Duplex</h3>
+              <p class="lead">
+                <b>Half-duplex</b> is a type of communication in which data can
+                be transmitted in two directions, but not at the same time. In
+                contrast, <b>full duplex</b> is a type of communication in which
+                data can be transmitted in two directions at the same time.
+              </p>
+              <div class="mt-3">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="././assets/images/duplex-infographic.png"
+                  style="max-width: 45em"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">ARP & Detecting Doubled IP Address</h3>
+              <p class="lead">
+                The Address Resolution Protocol (ARP) is a network layer
+                protocol that facilitates the mapping of an IP address to a
+                lower layer data link address, like Ethernet or MAC.
+              </p>
+              <p>
+                In simpler terms, ARP operates by broadcasting a message (e.g.,
+                over Ethernet) from one host, let's call it host1, to the entire
+                network. This message poses a question: "Who owns the IP address
+                IP1?" Host2, the owner of IP1, then responds with its Ethernet
+                address, E2. As a result, host1 learns that the host with IP
+                address IP1 is associated with the Ethernet address E2.
+              </p>
+              <p>
+                Detecting doubled IP addresses typically involves the use of
+                network protocols such as ICMP and ARP to identify IP conflicts.
+              </p>
+              <div class="mt-3">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="././assets/images/ARP-infographic.png"
+                  style="max-width: 45em"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">BOOTP & DHCP</h3>
+              <p class="lead">
+                <b>Bootstrap Protocol (BOOTP)</b> is a protocol used in to
+                automatically assign an IP address to network devices from a
+                configuration server.
+              </p>
+              <p class="lead">
+                <b>Dynamic Host Configuration Protocol (DHCP)</b> is a next
+                generation of BOOTP protocol, where a DHCP server dynamically
+                leases an IP address to each device on the network.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">VLANs</h3>
+              <p class="lead">
+                <b>VLANs (Virtual Local Area Networks)</b>, are a way to
+                logically segment a physical network into multiple isolated
+                logical networks.
+              </p>
+              <p>
+                VLANs enhance network efficiency, security, and manageability by
+                possibility of grouping devices based on factors like
+                department, function, or project, while keeping them separate in
+                terms of broadcast domains.
+              </p>
+              <div class="mt-3">
+                <img
+                  class="rounded mx-auto d-block border p-4"
+                  src="././assets/images/VLANs-infographic.png"
+                  style="max-width: 45em"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Floating buttons container -->
+      <div
+        class="d-flex justify-content-evenly py-4 mt-3 icons-container shadow-lg"
+        style="font-size: larger"
+      >
+        <a
+          href="../index.html"
+          style="display: block; position: fixed; bottom: 92%; right: 12px"
+          class="btn btn-primary p-3"
+          ><i class="fa-solid fa-house fa-2xl me-1"></i
+        ></a>
+        <a
+          href="./practical.html"
+          style="display: block; position: fixed; bottom: 83%; right: 12px"
+          class="btn btn-primary p-3"
+          ><i class="fa-solid fa-gears fa-2xl me-1"></i
+        ></a>
+      </div>
+      <!-- Floating buttons container -->
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
