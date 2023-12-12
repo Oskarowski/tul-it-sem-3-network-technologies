@@ -40,8 +40,198 @@
         <div class="">
           <ul class="list-group">
             <li class="list-group-item">
-              <h3 class="p-3">...</h3>
-              <p class="mb-0 lead">Placeholder</p>
+              <h3 class="p-3">IP Address</h3>
+              <p class="mb-0 lead">
+                An Internet Protocol address is a unique identificatory of a
+                device or a local network
+              </p>
+              <p class="mt-3">
+                Some IP addresses carry special meanings ex: 127.0.0.1 means
+                address of a local computer, 255.255.255.255 means broadcast
+                address
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Network Subnets</h3>
+              <p class="mb-0 lead">
+                A subnet is a logical subdivision of an IP network. It allows
+                for the creation of smaller, more manageable networks within a
+                larger network. More efficient (shorter) paths.
+              </p>
+              <div class="mt-3">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="././assets/images/subnetting-infographic.png"
+                  style="max-width: 100%"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Network Classes</h3>
+              <p class="mb-0 lead">
+                Size-based division of networks Each class has a different range
+                of valid IP addresses to accommodate various network sizes.
+              </p>
+              <table class="table table-bordered text-center mt-4">
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Number Range of Host Addresses</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A</td>
+                    <td>1.0.0.0 to 127.255.255.255</td>
+                  </tr>
+                  <tr>
+                    <td>B</td>
+                    <td>128.0.0.0 to 191.255.255.255</td>
+                  </tr>
+                  <tr>
+                    <td>C</td>
+                    <td>192.0.0.0 to 223.255.255.255</td>
+                  </tr>
+                  <tr>
+                    <td>D</td>
+                    <td>224.0.0.0 to 239.255.255.255</td>
+                  </tr>
+                  <tr>
+                    <td>E</td>
+                    <td>240.0.0.0 to 255.255.255.255</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Network Mask</h3>
+              <p class="mb-0 lead">
+                A netmask is a 32-bit binary mask used to divide an IP address
+                into subnets and specify the network's available hosts.
+              </p>
+              <p class="mt-3">
+                In a netmask, two of the possible addresses, the lowest and the
+                highest, are always pre-assigned and unavailable for custom
+                assignment.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Routing table</h3>
+              <p class="mb-0 lead">
+                A routing table is a data table that lists the routes to
+                particular network destinations. It contains information about
+                the available routes and the best paths to reach specific
+                destinations.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Default Gateway</h3>
+              <p class="mb-0 lead">
+                It serves as the exit point for traffic leaving one network and
+                entering another. When a device on a local network wants to
+                communicate with a device on another network, it sends the data
+                packets to the default gateway, which forwards them to the
+                appropriate destination.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Broadcast</h3>
+              <p class="mb-0 lead">
+                Broadcasting in widespread transmission of data to all devices
+                in a network at the same time
+              </p>
+              <div class="mt-3">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="../lab2/assets/images/broadcast-infographic.png"
+                  style="max-width: 100%"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Subnet Address</h3>
+              <p class="lead">
+                The subnet address is the numerical label assigned to a specific
+                subnet within a larger network. It is obtained by applying the
+                subnet mask to an IP address, effectively isolating the network
+                and host portions
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Private Network Address</h3>
+              <p class="lead">
+                Private network addresses are reserved IP address ranges
+                designated for use within private networks.<br />
+                These addresses are not routable on the public Internet.
+              </p>
+              <div class="mt-3 pb-2">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="./assets/images/public-vs-private-ips.png"
+                  style="max-width: 100%"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <ul class="list-group mt-5">
+            <li class="list-group-item">
+              <h3 class="p-3">Network Address Translation (NAT)</h3>
+              <p class="lead">
+                NAT is a technique used to map private IP addresses within a
+                local network to a single public IP address. This allows
+                multiple devices within a private network to share a single
+                public IP address when accessing the Internet
+              </p>
+              <div class="mt-3 pb-2">
+                <img
+                  class="rounded mx-auto d-block border"
+                  src="./assets/images/network-address-translation-infographic.jpg"
+                  style="max-width: 100%"
+                />
+              </div>
             </li>
           </ul>
         </div>
