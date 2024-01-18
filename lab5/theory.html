@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <script>
+            // prettier-ignore
+            !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_T9dmJ3jzZUKmR1vjJOMZOWgg07ezIBnYHMdMRUAEHCA', {
+                api_host: 'https://eu.posthog.com',
+            })
+        </script>
+
+        <link rel="stylesheet" href="../background.css" />
+        <link rel="stylesheet" href="../main.css" />
+
+        <title>NT-2023-01</title>
+    </head>
+
+    <body class="hex">
+        <main class="container">
+            <section class="mt-5">
+                <div class="">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h3 class="p-3">DNS system:</h3>
+                            <p class="mb-0 lead">
+                                The Domain Name System (DNS) is a hierarchical
+                                decentralized naming system that translates
+                                human-readable domain names into numerical IP
+                                addresses. It is a fundamental component of the
+                                internet, serving as a directory for mapping
+                                domain names to their corresponding IP
+                                addresses.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">List of Top-Level Domains:</h3>
+                            <p class="mb-0">
+                                Top-Level Domains (TLDs) represent the highest
+                                level in the DNS hierarchy. The top-level domain
+                                names are installed in the root zone of the
+                                namespace. Some common TLDs include:
+                            </p>
+                            <table class="table mx-auto">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th scope="col">TLD</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>.com</td>
+                                        <td>(commercial)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>.org</td>
+                                        <td>(organization)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>.net</td>
+                                        <td>(network)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>.gov</td>
+                                        <td>(government)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>.edu</td>
+                                        <td>(education)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>.us</td>
+                                        <td>United States</td>
+                                    </tr>
+                                    <tr>
+                                        <td>.uk</td>
+                                        <td>United Kingdom</td>
+                                    </tr>
+                                    <tr>
+                                        <td>.jp</td>
+                                        <td>Japan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>.pl</td>
+                                        <td>Poland</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">Hierarchical structure of DNS:</h3>
+                            <p class="mb-0 lead">
+                                The DNS has a hierarchical structure, consisting
+                                of multiple levels. At the top are the root
+                                servers, followed by top-level domain servers,
+                                authoritative domain servers, and the local DNS
+                                resolver.
+                            </p>
+                            <ul class="list-group list-group-flush mt-4 mb-0">
+                                <li class="list-group-item">
+                                    <b>The root domain</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        is at the apex of the domain name
+                                        hierarchy. Above it is the top-level
+                                        domains, further divided into
+                                        second-level domains, third-level
+                                        domains, and so on.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>The top-level domains</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        include generic domains, such as .com,
+                                        .net, and .org, and country code
+                                        top-level domains, such as .uk and .us.
+                                        The second-level domains are typically
+                                        used to identify an organization or
+                                        business. For example, the domain name
+                                        google.com consists of the second-level
+                                        domain Google and the top-level domain
+                                        .com.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Third-level domains</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        identify a specific host or service
+                                        associated with a domain name. For
+                                        example, the domain name www.google.com
+                                        consists of the third-level domain www,
+                                        the second-level domain google, and the
+                                        top-level domain .com.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Fifth-level domains</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        are typically used to identify a
+                                        particular resource within a domain. An
+                                        example of a fifth-level domain is
+                                        docs.google.com, which is used to access
+                                        Google’s online document storage
+                                        service.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">DNS Queries:</h3>
+                            <p class="mb-3">
+                                A DNS query is a message that a client sends to
+                                the DNS server. It contains a list of questions
+                                that the DNS server answers. A DNS query can
+                                contain multiple questions that the server will
+                                reply to, but a server might also reply with its
+                                own additional information.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">DNS Delegation:</h3>
+                            <p class="mb-3">
+                                DNS delegation involves the distribution of
+                                authority for a domain across multiple servers,
+                                allowing for efficient management of domain
+                                namespaces.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">DNS record:</h3>
+                            <p class="mb-3">
+                                DNS delegation involves the distribution of
+                                authority for a domain across multiple servers,
+                                allowing for efficient management of domain
+                                namespaces.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">DNS and reverse DNS:</h3>
+                            <p class="mb-3">
+                                DNS: The process of translating a domain name
+                                into an IP address.
+                            </p>
+                            <p class="mb-3">
+                                Reverse DNS: The reverse of DNS process, mapping
+                                an IP address to a domain name.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">
+                                Authoritative answer non authoritative:
+                            </h3>
+                            <ul class="list-group list-group-flush mt-4 mb-0">
+                                <li class="list-group-item">
+                                    <b>Authoritative Answer</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        Provided by a DNS server that has the
+                                        specific requested information. It is
+                                        considered trustworthy and definitive.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Non-Authoritative Answer</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        Provided by a server that does not
+                                        contain original source files of
+                                        domain's zone.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">
+                                DNS resolver, DNS cache, file: /etc/hosts:
+                            </h3>
+                            <ul class="list-group list-group-flush mt-4 mb-0">
+                                <li class="list-group-item">
+                                    <b>DNS Resolver</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        Server that receives DNS queries from
+                                        clients and finds the corresponding IP
+                                        addresses. It can be local or provided
+                                        by the ISP (Internet Service Provider)
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>DNS Cache</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        Stores previously resolved DNS queries,
+                                        reducing the need to query authoritative
+                                        servers repeatedly.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>File: /etc/hosts</b>:
+                                    <p class="mb-1" class="mb-1">
+                                        An operating system file that maps IP
+                                        addresses to hostnames locally,
+                                        bypassing DNS. It is commonly used for
+                                        manual address resolution or to override
+                                        DNS entries.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <br />
+                <br />
+                <br />
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">Protocols POP3, IMAP, SMTP:</h3>
+                            <ul class="list-group list-group-flush mt-4 mb-0">
+                                <li class="list-group-item">
+                                    <b>POP3 (Post Office Protocol 3)</b>:
+                                    <p class="mb-1">
+                                        Retrieves emails from a server to a
+                                        client device. Emails are completely
+                                        stored on the device after being
+                                        downloaded from the mail server. As a
+                                        result, an internet connection is only
+                                        required for syncing the inbox.
+                                        Typically deletes mail from the server
+                                        after downloading.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b
+                                        >IMAP (Internet Message Access
+                                        Protocol)</b
+                                    >:
+                                    <p class="mb-1">
+                                        Allows multiple devices to access the
+                                        same mailbox, keeping messages on the
+                                        server and synchronizing changes across
+                                        devices.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>SMTP (Simple Mail Transfer Protocol)</b>:
+                                    <p class="mb-1">
+                                        Connection oriented, mainly for managing
+                                        the sending of emails between servers.
+                                    </p>
+                                </li>
+                            </ul>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Command</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>HELO</td>
+                                        <td>
+                                            Provides the identification of the
+                                            sender (i.e., the host name)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MAIL</td>
+                                        <td>
+                                            Specifies the originator of the mail
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>RCPT</td>
+                                        <td>
+                                            Specifies the recipient of the mail
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>DATA</td>
+                                        <td>
+                                            Specifies the beginning of the mail
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>QUIT</td>
+                                        <td>Closes the TCP connection</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RSET</td>
+                                        <td>
+                                            Aborts the current mail transaction,
+                                            but the TCP connection remains open
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>VRFY</td>
+                                        <td>
+                                            Used to confirm or verify the
+                                            username
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>QUIT</td>
+                                        <td>
+                                            Commit message and close the channel
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">NNTP protocol:</h3>
+                            <p class="mb-3 lead">
+                                NNTP (Network News Transfer Protocol): Primarily
+                                used for reading and posting messages to UseNet
+                                (worldwide distributed discussion system)
+                                newsgroups, providing a distributed discussion
+                                system.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">
+                                E-mail mailbox, parameters, aliases, address:
+                            </h3>
+
+                            <ul class="list-group list-group-flush mt-4 mb-0">
+                                <li class="list-group-item">
+                                    <b>Email Mailbox</b>:
+                                    <p class="mb-1">
+                                        Storage location for received emails,
+                                        accessible through email clients.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Parameters</b>:
+                                    <ul class="mb-1">
+                                        <li>Storage limit</li>
+                                        <li>Messages per day</li>
+                                        <li>
+                                            Advanced spam & virus protection
+                                        </li>
+                                        <li>
+                                            Recipients per message (To, Cc, and
+                                            Bcc)
+                                        </li>
+                                        <li>Message limit</li>
+                                        <li>Alias limit</li>
+                                        <li>Footer template</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Aliases</b>:
+                                    <p class="mb-1">
+                                        Alternate email addresses (forwarding
+                                        address) that redirect messages to the
+                                        primary mailbox. With one e-mail
+                                        account, client can have multiple e-mail
+                                        addresses and one mailbox.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Address</b>:
+                                    <p class="mb-1">
+                                        Unique identifier for e-mail mailboxes,
+                                        typically in the format
+                                        local-part@domain
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">
+                                E-mail structure: header, separator:
+                            </h3>
+
+                            <ul class="list-group list-group-flush mt-1 mb-0">
+                                <li class="list-group-item">
+                                    <b>Header</b>:
+                                    <p class="mb-1">
+                                        Contains metadata about the email like
+                                        sender, recipient, subject, date.
+                                    </p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <b>Separator</b>:
+                                    <p class="mb-1">
+                                        Marks the boundary between one message
+                                        and another in an email conversation
+                                        thread.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">
+                                Attachments, e-mail coding, MIME:
+                            </h3>
+
+                            <ul class="list-group list-group-flush mt-1 mb-0">
+                                <li class="list-group-item">
+                                    <b>Attachments</b>:
+                                    <p class="mb-1">
+                                        Additional files included with an email.
+                                    </p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <b>E-mail coding</b>:
+                                    <p class="mb-1">
+                                        The source code of an email will contain
+                                        the header information for the email and
+                                        will often include HTML code to style
+                                        the rest of the message.
+                                    </p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <b
+                                        >MIME (Multipurpose Internet Mail
+                                        Extensions)</b
+                                    >:
+                                    <p class="mb-1">
+                                        An email standard that extends email
+                                        capabilities to support various content
+                                        types, attachments.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">Mailing lists, e-mail gate:</h3>
+
+                            <ul class="list-group list-group-flush mt-1 mb-0">
+                                <li class="list-group-item">
+                                    <b>Mailing Lists</b>:
+                                    <p class="mb-1">
+                                        Group of email addresses used for
+                                        sending messages to multiple recipients
+                                        simultaneously.
+                                    </p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <b>Email Gate</b>:
+                                    <p class="mb-1">
+                                        Acts as a gateway, managing the flow of
+                                        emails, protecting server, client from
+                                        malicious mails, spams.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">E-mail security, SSL, TLS, PGP:</h3>
+                            <p class="mt-0 mb-1">
+                                E-mail security - describing different
+                                procedures and techniques for protecting email
+                                accounts, content.
+                            </p>
+
+                            <ul class="list-group list-group-flush mt-0 mb-0">
+                                <li class="list-group-item">
+                                    <b>SSL & TLS</b>:
+                                    <p class="mb-1">
+                                        SSL (Secure Sockets Layer) and TLS
+                                        (Transport Layer Security): Encryption
+                                        protocols ensuring secure communication
+                                        between email clients and servers.
+                                    </p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <b>PGP (Pretty Good Privacy)</b>:
+                                    <p class="mb-1">
+                                        Encryption method for securing email
+                                        content and providing digital signatures
+                                        for verification.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item">
+                            <h3 class="p-3">
+                                Spam, blacklists, graylists, spam filtering :
+                            </h3>
+                            <p>
+                                E-mail security - describing different
+                                procedures and techniques for protecting email
+                                accounts, content.
+                            </p>
+
+                            <ul class="list-group list-group-flush mt-0 mb-0">
+                                <li class="list-group-item">
+                                    <b>Spam</b>:
+                                    <p class="mb-1">Unwanted communique</p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <b>Blacklists</b>:
+                                    <p class="mb-1">
+                                        Collection of entities from which we are
+                                        not interested in communications.
+                                    </p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <b>Graylists</b>:
+                                    <p class="mb-1">
+                                        Serve as a repository for entities that
+                                        have not yet been classified into either
+                                        a blacklist or whitelist.
+                                    </p>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <b>Spam Filtering</b>:
+                                    <p class="mb-1">
+                                        Techniques and tools to identify and
+                                        block spam messages, including content
+                                        analysis and blacklisting, virus scans.
+                                    </p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Floating buttons container -->
+            <div
+                class="d-flex justify-content-evenly py-4 mt-3 icons-container shadow-lg"
+                style="font-size: larger"
+            >
+                <a
+                    href="../index.html"
+                    style="
+                        display: block;
+                        position: fixed;
+                        bottom: 92%;
+                        right: 12px;
+                    "
+                    class="btn btn-primary p-3"
+                    ><i class="fa-solid fa-house fa-2xl me-1"></i
+                ></a>
+                <a
+                    href="./practical.html"
+                    style="
+                        display: block;
+                        position: fixed;
+                        bottom: 83%;
+                        right: 12px;
+                    "
+                    class="btn btn-primary p-3"
+                    ><i class="fa-solid fa-gears fa-2xl me-1"></i
+                ></a>
+            </div>
+            <!-- Floating buttons container -->
+        </main>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

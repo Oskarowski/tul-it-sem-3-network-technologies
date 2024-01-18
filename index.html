@@ -1,192 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <script>
-      // prettier-ignore
-      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-      posthog.init("phc_T9dmJ3jzZUKmR1vjJOMZOWgg07ezIBnYHMdMRUAEHCA", {
-        api_host: "https://eu.posthog.com",
-      });
-    </script>
+        <script>
+            // prettier-ignore
+            !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_T9dmJ3jzZUKmR1vjJOMZOWgg07ezIBnYHMdMRUAEHCA', {
+                api_host: 'https://eu.posthog.com',
+            })
+        </script>
 
-    <!-- Import background  -->
-    <link rel="stylesheet" href="background.css" />
-    <link rel="stylesheet" href="main.css" />
+        <!-- Import background  -->
+        <link rel="stylesheet" href="background.css" />
+        <link rel="stylesheet" href="main.css" />
 
-    <title>NT-2023-01</title>
-  </head>
-  <body class="hex d-flex flex-column min-vh-100">
-    <header class="bg-primary text-white text-center py-4">
-      <h1 class="display-4">Network Technologies</h1>
-      <h2 class="display-6">
-        Friday 16<sup style="font-size: 0.5em; vertical-align: super">00</sup>
-        Laboratories
-      </h2>
-    </header>
+        <title>NT-2023-01</title>
+    </head>
+    <body class="hex d-flex flex-column min-vh-100">
+        <header class="bg-primary text-white text-center py-4">
+            <h1 class="display-4">Network Technologies</h1>
+            <h2 class="display-6">
+                Friday 16<sup style="font-size: 0.5em; vertical-align: super"
+                    >00</sup
+                >
+                Laboratories
+            </h2>
+        </header>
 
-    <!-- <div class="bg"></div>
+        <!-- <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div> -->
 
-    <section class="container mt-5">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card mb-4 text-center">
-            <div class="card-body">
-              <h2 class="card-title">Oskar Kacprzak</h2>
-              <h4 class="card-subtitle mb-2 text-muted"><b>247026</b></h4>
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 text-center">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <a
+                                    style="all: unset"
+                                    href="https://github.com/Oskarowski/tul-it-sem-3-network-technologies"
+                                    >Oskar Kacprzak</a
+                                >
+                            </h2>
+                            <h4 class="card-subtitle mb-2 text-muted">
+                                <b>247026</b>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 text-center">
+                        <div class="card-body">
+                            <h2 class="card-title">Łukasz Gluck</h2>
+                            <h4 class="card-subtitle mb-2 text-muted">
+                                <b>247021</b>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card mb-4 text-center">
-            <div class="card-body">
-              <h2 class="card-title">Łukasz Gluck</h2>
-              <h4 class="card-subtitle mb-2 text-muted"><b>247021</b></h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="container mt-3">
-      <div class="row row-cols-1 row-cols-md-5">
-        <!-- Assignment 1 -->
-        <div class="my-2">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title text-center">Assignment 1</h2>
-              <div
-                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
-                style="font-size: larger"
-              >
-                <a href="lab1/theory.html" class=""
-                  ><i class="fa-solid fa-book fa-2xl"></i
-                ></a>
-                <a href="lab1/practical.html"
-                  ><i class="fa-solid fa-gears fa-2xl"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Assignment 1 -->
+        </section>
+        <section class="container mt-3">
+            <div class="row row-cols-1 row-cols-md-5">
+                <!-- Assignment 1 -->
+                <div class="my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Assignment 1</h2>
+                            <div
+                                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
+                                style="font-size: larger"
+                            >
+                                <a href="lab1/theory.html" class=""
+                                    ><i class="fa-solid fa-book fa-2xl"></i
+                                ></a>
+                                <a href="lab1/practical.html"
+                                    ><i class="fa-solid fa-gears fa-2xl"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Assignment 1 -->
 
-        <!-- Assignment 2 -->
-        <div class="my-2">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title text-center">Assignment 2</h2>
-              <div
-                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
-                style="font-size: larger"
-              >
-                <a href="lab2/theory.html"
-                  ><i class="fa-solid fa-book fa-2xl"></i
-                ></a>
-                <a href="lab2/practical.html"
-                  ><i class="fa-solid fa-gears fa-2xl"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Assignment 2 -->
+                <!-- Assignment 2 -->
+                <div class="my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Assignment 2</h2>
+                            <div
+                                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
+                                style="font-size: larger"
+                            >
+                                <a href="lab2/theory.html"
+                                    ><i class="fa-solid fa-book fa-2xl"></i
+                                ></a>
+                                <a href="lab2/practical.html"
+                                    ><i class="fa-solid fa-gears fa-2xl"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Assignment 2 -->
 
-        <!-- Assignment 3 -->
-        <div class="my-2">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title text-center">Assignment 3</h2>
-              <div
-                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
-                style="font-size: larger"
-              >
-                <a href="lab3/theory.html"
-                  ><i class="fa-solid fa-book fa-2xl"></i
-                ></a>
-                <a href="lab3/practical.html"
-                  ><i class="fa-solid fa-gears fa-2xl"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Assignment 3 -->
+                <!-- Assignment 3 -->
+                <div class="my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Assignment 3</h2>
+                            <div
+                                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
+                                style="font-size: larger"
+                            >
+                                <a href="lab3/theory.html"
+                                    ><i class="fa-solid fa-book fa-2xl"></i
+                                ></a>
+                                <a href="lab3/practical.html"
+                                    ><i class="fa-solid fa-gears fa-2xl"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Assignment 3 -->
 
-        <!-- Assignment 4 -->
-        <div class="my-2">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title text-center">Assignment 4</h2>
-              <div
-                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
-                style="font-size: larger"
-              >
-                <a href="lab4/theory.html"
-                  ><i class="fa-solid fa-book fa-2xl"></i
-                ></a>
-                <a href="lab4/practical.html"
-                  ><i class="fa-solid fa-gears fa-2xl"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Assignment 4 -->
+                <!-- Assignment 4 -->
+                <div class="my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Assignment 4</h2>
+                            <div
+                                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
+                                style="font-size: larger"
+                            >
+                                <a href="lab4/theory.html"
+                                    ><i class="fa-solid fa-book fa-2xl"></i
+                                ></a>
+                                <a href="lab4/practical.html"
+                                    ><i class="fa-solid fa-gears fa-2xl"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Assignment 4 -->
 
-        <!-- Assignment 5 -->
-        <!-- <div class="my-2">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title text-center">Assignment 5</h2>
-              <div
-                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
-                style="font-size: larger"
-              >
-                <a href="lab5/theory.html"
-                  ><i class="fa-solid fa-book fa-2xl"></i
-                ></a>
-                <a href="lab5/practical.html"
-                  ><i class="fa-solid fa-gears fa-2xl"></i
-                ></a>
-              </div>
+                <!-- Assignment 5 -->
+                <div class="my-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Assignment 5</h2>
+                            <div
+                                class="d-flex justify-content-evenly py-4 mt-3 icons-container"
+                                style="font-size: larger"
+                            >
+                                <a href="lab5/theory.html"
+                                    ><i class="fa-solid fa-book fa-2xl"></i
+                                ></a>
+                                <a href="lab5/practical.html"
+                                    ><i class="fa-solid fa-gears fa-2xl"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Assignment 5 -->
             </div>
-          </div>
-        </div> -->
-        <!-- Assignment 5 -->
-      </div>
-    </section>
-    <!-- FOOTER -->
-    <footer class="mt-auto bg-dark text-light p-2 text-center">
-      <p class="p-0 m-0">&copy;Group: <i>ife23_01</i></p>
-    </footer>
-    <!-- FOOTER -->
+        </section>
+        <!-- FOOTER -->
+        <footer class="mt-auto bg-dark text-light p-2 text-center">
+            <p class="p-0 m-0">&copy;Group: <i>ife23_01</i></p>
+        </footer>
+        <!-- FOOTER -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
