@@ -1,251 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous"
-        />
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-        <script>
-            // prettier-ignore
-            !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-            posthog.init('phc_T9dmJ3jzZUKmR1vjJOMZOWgg07ezIBnYHMdMRUAEHCA', {
-                api_host: 'https://eu.posthog.com',
-            })
-        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link rel="stylesheet" href="../background.css" />
-        <link rel="stylesheet" href="../main.css" />
+    <script>
+        // prettier-ignore
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        posthog.init('phc_T9dmJ3jzZUKmR1vjJOMZOWgg07ezIBnYHMdMRUAEHCA', {
+            api_host: 'https://eu.posthog.com',
+        })
+    </script>
 
-        <title>NT-2023-01</title>
-    </head>
+    <link rel="stylesheet" href="../background.css" />
+    <link rel="stylesheet" href="../main.css" />
 
-    <body class="hex">
-        <main class="container">
-            <ul class="list-group mt-5">
-                <li class="list-group-item">
-                    <h5 class="text-center mb-3">
-                        Use netstat and Wireshark to identify ports which are
-                        used for data transmission
-                    </h5>
+    <title>NT-2023-01</title>
+</head>
 
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/2-1-1 netstat -na.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/2-1-2 wireshark.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                </li>
-            </ul>
+<body class="hex">
+    <main class="container">
+        <ul class="list-group mt-5">
+            <li class="list-group-item">
+                <h5 class="text-center mb-3">
+                    Use netstat and Wireshark to identify ports which are
+                    used for data transmission
+                </h5>
 
-            <ul class="list-group mt-5">
-                <li class="list-group-item">
-                    <h5 class="text-center mb-3">
-                        LINUX
-                    </h5>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/images/2-1-1 netstat -na.png"
+                        style="max-width: 100%" />
+                </ul>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/images/2-1-2 wireshark.png"
+                        style="max-width: 100%" />
+                </ul>
+            </li>
+        </ul>
 
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/linux 2-1-1 ss.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/linux 2-1-1 wireshark.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                </li>
-            </ul>
+        <ul class="list-group mt-5">
+            <li class="list-group-item">
+                <h5 class="text-center mb-3">
+                    LINUX, Use netstat and Wireshark to identify ports which are
+                    used for data transmission
+                </h5>
 
-            <ul class="list-group mt-5">
-                <li class="list-group-item">
-                    <h5 class="text-center mb-3">
-                        Copy the file from your local host to
-                        <i>studife.it.p.lodz.pl</i> server using ftp protocol
-                    </h5>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/linux-images/linux 2-1-1 ss.png"
+                        style="max-width: 100%" />
+                </ul>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/linux-images/linux 2-1-1 wireshark.png"
+                        style="max-width: 100%" />
+                </ul>
+            </li>
+        </ul>
 
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/2-2-2 netstat ftp file.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/2-2-1 wireshark ftp file.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                </li>
-            </ul>
+        <ul class="list-group mt-5">
+            <li class="list-group-item">
+                <h5 class="text-center mb-3">
+                    Copy the file from your local host to
+                    <i>studife.it.p.lodz.pl</i> server using ftp protocol
+                </h5>
 
-            <ul class="list-group mt-5">
-                <li class="list-group-item">
-                    <h5 class="text-center mb-3">
-                        LINUX
-                    </h5>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/images/2-2-2 netstat ftp file.png"
+                        style="max-width: 100%" />
+                </ul>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/images/2-2-1 wireshark ftp file.png"
+                        style="max-width: 100%" />
+                </ul>
+            </li>
+        </ul>
 
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/linux 2-1-2 ss.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/linux 2-1-2 wireshark.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                </li>
-            </ul>
+        <ul class="list-group mt-5">
+            <li class="list-group-item">
+                <h5 class="text-center mb-3">
+                    LINUX, Copy the file from your local host to
+                    <i>studife.it.p.lodz.pl</i> server using ftp protocol
+                </h5>
 
-            <ul class="list-group mt-5">
-                <li class="list-group-item">
-                    <h5 class="text-center mb-3">
-                        Copy the file from your local host to
-                        <i>studife.it.p.lodz.pl</i> server using scp or sftp
-                        protocol
-                    </h5>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/linux-images/linux 2-1-2 ss.png"
+                        style="max-width: 100%" />
+                </ul>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/linux-images/linux 2-1-2 wireshark.png"
+                        style="max-width: 100%" />
+                </ul>
+            </li>
+        </ul>
 
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/2-3-2 netstat sftp.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/2-3-1 wireshark sftp.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                </li>
-            </ul>
+        <ul class="list-group mt-5">
+            <li class="list-group-item">
+                <h5 class="text-center mb-3">
+                    Copy the file from your local host to
+                    <i>studife.it.p.lodz.pl</i> server using scp or sftp
+                    protocol
+                </h5>
 
-            <ul class="list-group mt-5">
-                <li class="list-group-item">
-                    <h5 class="text-center mb-3">
-                        LINUX
-                    </h5>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/images/2-3-2 netstat sftp.png"
+                        style="max-width: 100%" />
+                </ul>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/images/2-3-1 wireshark sftp.png"
+                        style="max-width: 100%" />
+                </ul>
+            </li>
+        </ul>
 
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/linux 2-1-3 ss.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/linux 2-1-3 wireshark.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                </li>
-            </ul>
+        <ul class="list-group mt-5">
+            <li class="list-group-item">
+                <h5 class="text-center mb-3">
+                    LINUX, Copy the file from your local host to
+                    <i>studife.it.p.lodz.pl</i> server using scp or sftp
+                    protocol
+                </h5>
 
-            <ul class="list-group mt-5">
-                <li class="list-group-item">
-                    <h5 class="text-center mb-3">
-                        Use Wireshark to check which protocol and port is used
-                        in transport layer by DNS protocol
-                    </h5>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/linux-images/linux 2-1-3 ss.png"
+                        style="max-width: 100%" />
+                </ul>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/linux-images/linux 2-1-3 wireshark.png"
+                        style="max-width: 100%" />
+                </ul>
+            </li>
+        </ul>
 
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/2-4-1 wireshark dns port .png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                </li>
-            </ul>
+        <ul class="list-group mt-5">
+            <li class="list-group-item">
+                <h5 class="text-center mb-3">
+                    Use Wireshark to check which protocol and port is used
+                    in transport layer by DNS protocol
+                </h5>
 
-            <ul class="list-group mt-5">
-                <li class="list-group-item">
-                    <h5 class="text-center mb-3">
-                        LINUX
-                    </h5>
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/images/2-4-1 wireshark dns port .png"
+                        style="max-width: 100%" />
+                </ul>
+            </li>
+        </ul>
 
-                    <ul class="mt-1">
-                        <img
-                            class="rounded mx-auto d-block border"
-                            src="././assets/images/linux 2-1-4 wireshark.png"
-                            style="max-width: 100%"
-                        />
-                    </ul>
-                </li>
-            </ul>
+        <ul class="list-group mt-5">
+            <li class="list-group-item">
+                <h5 class="text-center mb-3">
+                    LINUX, Use Wireshark to check which protocol and port is used
+                    in transport layer by DNS protocol
+                </h5>
 
-            <!-- Floating buttons container -->
-            <div
-                class="d-flex justify-content-evenly py-4 mt-3 icons-container shadow-lg"
-            >
-                <a
-                    href="../index.html"
-                    style="
+                <ul class="mt-1">
+                    <img class="rounded mx-auto d-block border" src="././assets/linux-images/linux 2-1-4 wireshark.png"
+                        style="max-width: 100%" />
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Floating buttons container -->
+        <div class="d-flex justify-content-evenly py-4 mt-3 icons-container shadow-lg">
+            <a href="../index.html" style="
                         display: block;
                         position: fixed;
                         bottom: 92%;
                         right: 12px;
-                    "
-                    class="btn btn-primary p-3"
-                    ><i class="fa-solid fa-house fa-2xl me-1"></i
-                ></a>
-                <a
-                    href="./theory.html"
-                    style="
+                    " class="btn btn-primary p-3"><i class="fa-solid fa-house fa-2xl me-1"></i></a>
+            <a href="./theory.html" style="
                         display: block;
                         position: fixed;
                         bottom: 83%;
                         right: 12px;
-                    "
-                    class="btn btn-primary p-3 m-0"
-                    ><i class="fa-solid fa-book fa-2xl me-1 ms-1"></i
-                ></a>
-            </div>
-            <!-- Floating buttons container -->
-        </main>
+                    " class="btn btn-primary p-3 m-0"><i class="fa-solid fa-book fa-2xl me-1 ms-1"></i></a>
+        </div>
+        <!-- Floating buttons container -->
+    </main>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
